@@ -95,6 +95,14 @@ export default function MessageBubble({ msg }) {
               <ChartView chart={msg.artifacts.chart} />
             </>
           ) : null}
+
+          {msg.artifacts?.summary ? (
+            <>
+              <Divider />
+              <Typography>Number of rows: {msg.artifacts?.summary.n_rows}</Typography>
+              <Typography>Number of columns: {msg.artifacts?.summary.n_cols}</Typography>
+            </>
+          ) : null}
         </Stack>
       </Paper>
     </Box>
